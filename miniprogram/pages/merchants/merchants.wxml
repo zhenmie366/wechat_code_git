@@ -1,0 +1,59 @@
+<!--pages/merchants/merchants.wxml-->
+<view class="navbar">
+  <view class="nav-title">夥夥</view>
+  <view class="nav-right">
+    <button class="auth-btn" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">
+      <icon type="user" size="20" color="#007AFF"></icon>
+    </button>
+    </view>
+  <view class="points-display">{{userPoints}} 积分</view>
+</view>
+
+<view class="segmented-control">
+  <view 
+    class="segment {{currentTab === 0 ? 'active' : ''}}" 
+    bindtap="switchTab" 
+    data-index="0"
+  >
+    推荐商家
+  </view>
+  <view 
+    class="segment {{currentTab === 1 ? 'active' : ''}}" 
+    bindtap="switchTab" 
+    data-index="1"
+  >
+    附近商家
+  </view>
+  <view 
+    class="segment {{currentTab === 2 ? 'active' : ''}}" 
+    bindtap="switchTab" 
+    data-index="2"
+  >
+    热门商家
+  </view>
+</view>
+
+<scroll-view class="merchants-container" scroll-y>
+  <view class="merchants-grid">
+    <view 
+      class="merchant-card" 
+      wx:for="{{merchants}}" 
+      wx:key="id" 
+      bindtap="selectMerchant" 
+      data-merchant="{{item}}"
+    >
+      <view class="ad-badge">热门推荐</view>
+      <view class="merchant-image">
+        <image src="{{item.image}}" mode="aspectFill"></image>
+      </view>
+      <view class="card-content">
+        <text class="merchant-name">{{item.name}}</text>
+        <text class="cashback-rate">{{item.rate}}</text>
+        <text class="product-description">{{item.description}}</text>
+        <view class="product-button">
+          <text>查看产品</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

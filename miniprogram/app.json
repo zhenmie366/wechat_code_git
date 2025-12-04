@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/merchants/merchants",
+    "pages/share/share",
+    "pages/points/points"
+  ],
+  "optimization": {
+    "lazyCodeLoading": "requiredComponents"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#007AFF",
+    "navigationBarTitleText": "夥夥金",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#8E8E93",
+    "selectedColor": "#007AFF",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/merchants/merchants",
+        "iconPath": "images/tab_merchants.png",
+        "selectedIconPath": "images/tab_merchants_active.png"
+      },
+      {
+        "pagePath": "pages/share/share",
+        "iconPath": "images/tab_share.png",
+        "selectedIconPath": "images/tab_share_active.png"
+      },
+      {
+        "pagePath": "pages/points/points",
+        "iconPath": "images/tab_points.png",
+        "selectedIconPath": "images/tab_points_active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

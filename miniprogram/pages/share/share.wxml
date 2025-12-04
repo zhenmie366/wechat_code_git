@@ -1,0 +1,43 @@
+<!--pages/share/share.wxml-->
+<view class="container">
+  <view class="section-title">
+    <text class="section-heading">分享赚积分</text>
+    <text class="section-subheading">选择平台分享给好友，获得积分奖励</text>
+  </view>
+  
+  <view class="platform-selector">
+    <view 
+      class="platform-btn {{selectedPlatform === item.id ? 'active' : ''}}" 
+      wx:for="{{platforms}}" 
+      wx:key="id" 
+      bindtap="selectPlatform" 
+      data-platform="{{item.id}}"
+      style="color: {{selectedPlatform === item.id ? '#fff' : item.color}}; background-color: {{selectedPlatform === item.id ? item.color : '#fff'}}"
+    >
+      <icon type="{{item.icon}}" size="40"></icon>
+      <text class="platform-name">{{item.name}}</text>
+    </view>
+  </view>
+  
+  <view class="share-preview" wx:if="{{merchant}}">
+    <view class="preview-image">
+      <image src="{{merchant.image}}" mode="aspectFill"></image>
+    </view>
+    <text class="preview-title">{{merchant.name}}</text>
+    <view class="preview-info">
+      <text class="preview-rate">{{merchant.rate}}</text>
+      <text class="preview-points">积分奖励: {{merchant.points}} 分</text>
+    </view>
+  </view>
+  
+  <view class="action-buttons">
+    <button class="btn btn-primary" bindtap="shareMerchant">
+      <icon type="success" size="16"></icon>
+      确认分享
+    </button>
+    <button class="btn btn-secondary" bindtap="backToMerchants">
+      <icon type="clear" size="16"></icon>
+      返回商家
+    </button>
+  </view>
+</view>

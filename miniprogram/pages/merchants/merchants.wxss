@@ -1,0 +1,146 @@
+/* pages/merchants/merchants.wxss */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 32rpx;
+  background: white;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  width: 100rpx;
+}
+
+.auth-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  background-color: #007AFF;
+  
+}
+
+.auth-btn::after {
+  border: none;
+}
+
+.nav-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #007AFF;
+}
+
+.points-display {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #007AFF;
+  background: rgba(0, 122, 255, 0.1);
+  padding: 12rpx 24rpx;
+  border-radius: 20rpx;
+}
+
+.segmented-control {
+  display: flex;
+  background: rgba(116, 116, 128, 0.08);
+  border-radius: 18rpx;
+  padding: 6rpx;
+  margin: 32rpx;
+}
+
+.segment {
+  flex: 1;
+  padding: 20rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 600;
+  border-radius: 14rpx;
+  transition: all 0.3s ease;
+}
+
+.segment.active {
+  background: white;
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.1);
+}
+
+.merchants-container {
+  height: calc(100vh - 200rpx);
+}
+
+.merchants-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24rpx;
+  padding: 0 32rpx 32rpx;
+}
+
+.merchant-card {
+  background: white;
+  border-radius: 28rpx;
+  overflow: hidden;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.ad-badge {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  background: #FF9500;
+  color: white;
+  padding: 8rpx 16rpx;
+  border-radius: 40rpx;
+  font-size: 20rpx;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.merchant-image {
+  height: 240rpx;
+  background: #F2F2F7;
+}
+
+.merchant-image image {
+  width: 100%;
+  height: 100%;
+}
+
+.card-content {
+  padding: 24rpx;
+}
+
+.merchant-name {
+  font-size: 32rpx;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.cashback-rate {
+  color: #34C759;
+  font-weight: 600;
+  font-size: 26rpx;
+  display: block;
+  margin-bottom: 12rpx;
+}
+
+.product-description {
+  color: #8E8E93;
+  font-size: 24rpx;
+  line-height: 1.4;
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.product-button {
+  display: inline-block;
+  background: #34C759;
+  color: white;
+  padding: 16rpx 24rpx;
+  border-radius: 12rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+}
